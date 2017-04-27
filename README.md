@@ -1,3 +1,3 @@
 # DesignPatterns
 
-A set of examples for patterns implementations in JAVA
+A set of examples for patterns implementation in JAVA
