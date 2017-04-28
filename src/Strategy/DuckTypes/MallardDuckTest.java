@@ -1,7 +1,7 @@
-package strategy_pattern.DuckTypes;
+package Strategy.DuckTypes;
 
-import strategy_pattern.FlyBehavior.FlyWithWings;
-import strategy_pattern.QuackBehavior.Quack;
+import Strategy.FlyBehavior.FlyWithWings;
+import Strategy.QuackBehavior.Quack;
 import org.junit.Test;
 
 /**

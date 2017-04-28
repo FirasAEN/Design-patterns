@@ -1,4 +1,4 @@
-package strategy_pattern.QuackBehavior;
+package Strategy.QuackBehavior;
 
 /**
  * Created by FAB3659 on 4/27/2017.

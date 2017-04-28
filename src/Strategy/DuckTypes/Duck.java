@@ -1,7 +1,7 @@
-package strategy_pattern.DuckTypes;
+package Strategy.DuckTypes;
 
-import strategy_pattern.FlyBehavior.FlyBehavior;
-import strategy_pattern.QuackBehavior.QuackBehavior;
+import Strategy.FlyBehavior.FlyBehavior;
+import Strategy.QuackBehavior.QuackBehavior;
 
 /**
  * Created by FAB3659 on 4/27/2017.
