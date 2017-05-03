@@ -8,21 +8,24 @@ import java.util.List;
 /**
  * Created by FAB3659 on 5/3/2017.
  */
-public class Subject1 implements Subject {
-    List<Observer> subscribers = new ArrayList<>();
+public class WeatherData implements Subject {
+    List<Observer> displays = new ArrayList<>();
+
+
 
     @Override
     public void registerObserver(Observer o) {
-        this.subscribers.add(o);
+        this.displays.add(o);
+        displays.get(displays.indexOf(o)).update();
     }
 
     @Override
     public void removeObserver(Observer o) {
-        this.subscribers.remove(o);
+        displays.remove(displays.indexOf(o));
     }
 
     @Override
     public void notifyObservers() {
-        this.subscribers.forEach(subs->subs.update());
+        this.displays.forEach(display -> display.update());
     }
 }
