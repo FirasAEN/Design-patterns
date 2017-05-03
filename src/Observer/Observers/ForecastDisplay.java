@@ -8,10 +8,11 @@ import Observer.Subjects.WeatherData;
  */
 public class ForecastDisplay implements Observer, Display {
 
-    Subject weatherData = new WeatherData();
+    Subject weatherData;
 
-    public ForecastDisplay() {
-        this.weatherData.registerObserver(this);
+    public ForecastDisplay(Subject weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
     }
 
     @Override

@@ -9,9 +9,11 @@ import java.util.List;
  * Created by FAB3659 on 5/3/2017.
  */
 public class WeatherData implements Subject {
-    List<Observer> displays = new ArrayList<>();
+    private List<Observer> displays;
 
-
+    public WeatherData() {
+        this.displays = new ArrayList<>();
+    }
 
     @Override
     public void registerObserver(Observer o) {
@@ -21,11 +23,16 @@ public class WeatherData implements Subject {
 
     @Override
     public void removeObserver(Observer o) {
-        displays.remove(displays.indexOf(o));
+        int position = displays.indexOf(o);
+        if(position >=0)  displays.remove(position);
     }
 
     @Override
     public void notifyObservers() {
-        this.displays.forEach(display -> display.update());
+        this.displays.forEach(observer -> observer.update());
+    }
+
+    public void measurementsChanged(){
+        notifyObservers();
     }
 }
