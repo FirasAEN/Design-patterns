@@ -1,2 +1,5 @@
 .idea/*.xml
 documentation/*.EAP
+src/.idea/
+src/*.iml
+out/*
