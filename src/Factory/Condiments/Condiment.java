@@ -7,16 +7,6 @@ import Factory.Food.Food;
  */
 public abstract class Condiment extends Food{
     private double condimentPrice;
-    private Food food;
-
-    public Food getFood() {
-        return food;
-    }
-
-    public void setFood(Food food) {
-        this.food = food;
-        super.setPrice(this.food.getPrice() + this.getCondimentPrice());
-    }
 
     public double getCondimentPrice() {
         return condimentPrice;
@@ -26,7 +16,8 @@ public abstract class Condiment extends Food{
         this.condimentPrice = condimentPrice;
     }
 
-    public double getTotalPrice(){
-        return super.getPrice();
+
+    public void calculatePrice(Food food) {
+        super.setFoodPrice(food.getFoodPrice()+getCondimentPrice());
     }
 }

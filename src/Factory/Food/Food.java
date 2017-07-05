@@ -4,13 +4,13 @@ package Factory.Food;
  * Created by FAB3659 on 2017-07-05.
  */
 public abstract class Food {
-    private double price;
+    private double foodPrice;
 
-    public double getPrice() {
-        return price;
+    public double getFoodPrice() {
+        return foodPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setFoodPrice(double price) {
+        this.foodPrice= price;
     }
 }

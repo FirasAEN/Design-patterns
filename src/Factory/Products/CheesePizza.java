@@ -9,7 +9,7 @@ public class CheesePizza extends Pizza {
     private final double price = 12.5;
     public CheesePizza(IngredientsFactory ingredientsFactory) {
 
-        super.setPrice(this.price);
+        super.setFoodPrice(this.price);
         super.setCheese(ingredientsFactory.selectCheese());
         super.setDoe(ingredientsFactory.selectDoe());
         super.setVegetables(ingredientsFactory.selectVegetables());

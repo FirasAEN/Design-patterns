@@ -1,5 +1,6 @@
 package Factory.Ingredients.ConcreteIngredients.Cheese;
 
+import Factory.Food.Food;
 import Factory.Ingredients.Cheese;
 
 /**
@@ -8,8 +9,12 @@ import Factory.Ingredients.Cheese;
 public class MozzarellaCheese extends Cheese {
     private final double price = 2.50;
 
-    public MozzarellaCheese() {
-        super.setCondimentPrice(this.price);
+    public MozzarellaCheese(){
+    }
+
+    public MozzarellaCheese(Food food) {
         super.setName(CheeseName.MOZZARELLA);
+        super.setCondimentPrice(this.price);
+        super.calculatePrice(food);
     }
 }
