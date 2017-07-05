@@ -15,6 +15,7 @@ public abstract class Condiment extends Food{
 
     public void setFood(Food food) {
         this.food = food;
+        super.setPrice(this.food.getPrice() + this.getCondimentPrice());
     }
 
     public double getCondimentPrice() {
@@ -26,6 +27,6 @@ public abstract class Condiment extends Food{
     }
 
     public double getTotalPrice(){
-        return this.food.getPrice() + this.getCondimentPrice();
+        return super.getPrice();
     }
 }
