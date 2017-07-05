@@ -1,8 +1,8 @@
 package Factory;
 
-import Factory.AbstractCreator.PizzaStore;
-import Factory.ConcreteCreator.NYPizzaStore;
-import Factory.ConcreteProduct.PizzaType;
+import Factory.Stores.PizzaStore;
+import Factory.Stores.NYPizzaStore;
+import Factory.Products.PizzaType;
 
 /**
  * Created by FAB3659 on 2017-07-05.
