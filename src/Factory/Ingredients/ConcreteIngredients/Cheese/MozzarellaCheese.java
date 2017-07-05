@@ -10,6 +10,8 @@ public class MozzarellaCheese extends Cheese {
     private final double price = 2.50;
 
     public MozzarellaCheese(){
+        super.setName(CheeseName.MOZZARELLA);
+        super.setCondimentPrice(this.price);
     }
 
     public MozzarellaCheese(Food food) {

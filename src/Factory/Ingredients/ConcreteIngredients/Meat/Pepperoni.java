@@ -10,6 +10,7 @@ public class Pepperoni extends Meat {
     private final double price = 1.5;
 
     public Pepperoni() {
+        super.setCondimentPrice(this.price);
     }
 
     public Pepperoni(Food food) {
