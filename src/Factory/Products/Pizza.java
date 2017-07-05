@@ -1,11 +1,12 @@
 package Factory.Products;
 
+import Factory.Food.Food;
 import Factory.Ingredients.*;
 
 /**
  * Created by FAB3659 on 2017-07-04.
  */
-public abstract class Pizza {
+public abstract class Pizza extends Food {
     private Cheese cheese;
     private Doe doe;
     private Meat meat;
@@ -67,4 +68,5 @@ public abstract class Pizza {
     public void deliver() {
         System.out.println("Delivering Pizza...");
     }
+
 }
