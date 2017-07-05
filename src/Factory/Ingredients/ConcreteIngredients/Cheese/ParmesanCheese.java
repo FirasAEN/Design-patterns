@@ -8,6 +8,6 @@ import Factory.Ingredients.Cheese;
 public class ParmesanCheese  extends Cheese {
 
     public ParmesanCheese() {
-        super.setName(CheeseNames.PARMESAN);
+        super.setName(CheeseName.PARMESAN);
     }
 }

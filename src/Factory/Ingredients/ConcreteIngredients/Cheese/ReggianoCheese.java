@@ -7,6 +7,6 @@ import Factory.Ingredients.Cheese;
  */
 public class ReggianoCheese extends Cheese{
     public ReggianoCheese() {
-        super.setName(CheeseNames.REGGIANO);
+        super.setName(CheeseName.REGGIANO);
     }
 }
