@@ -1,12 +1,12 @@
 package Command.Receivers.ConcreteCommands;
 
-import Command.CommandInterfaces.ExecuteCommand;
+import Command.CommandInterfaces.Command;
 import Command.Receivers.Light;
 
 /**
  * Created by Firas on 12/13/2017.
  */
-public class LightOnCommand implements ExecuteCommand {
+public class LightOnCommand extends Command {
 
     private Light light;
 
@@ -17,5 +17,11 @@ public class LightOnCommand implements ExecuteCommand {
     @Override
     public void execute() {
         this.light.on();
+    }
+
+    @Override
+    public void undo() {
+        this.light.off();
+        System.out.println("Undo : light turned off");
     }
 }

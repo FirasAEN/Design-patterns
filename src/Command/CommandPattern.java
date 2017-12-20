@@ -1,6 +1,6 @@
 package Command;
 
-import Command.CommandInterfaces.ExecuteCommand;
+import Command.CommandInterfaces.Command;
 import Command.Invokers.RemoteController;
 import Command.Receivers.ConcreteCommands.LightOffCommand;
 import Command.Receivers.ConcreteCommands.LightOnCommand;
@@ -21,10 +21,14 @@ public class CommandPattern {
         RemoteController remoteController = new RemoteController();
         remoteController.setCommand(0, lightOnCommand, lightOffCommand);
 
-        Arrays.asList(remoteController.getOnCommands())
-                .forEach(ExecuteCommand::execute);
-        Arrays.asList(remoteController.getOffCommands())
-                .forEach(ExecuteCommand::execute);
+        for(int slot=0; slot<remoteController.getOnCommands().length; slot++){
+            remoteController.onCommandPushed(slot);
+        }
+        System.out.println(remoteController);
+
+        for(int slot=0; slot<remoteController.getOnCommands().length; slot++){
+            remoteController.offCommandPushed(slot);
+        }
 
         System.out.println(remoteController);
     }
