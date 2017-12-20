@@ -1,5 +1,11 @@
 package Command;
 
+import Command.CommandInterfaces.ExecuteCommand;
+import Command.Invokers.RemoteController;
+import Command.Receivers.ConcreteCommands.LightOffCommand;
+import Command.Receivers.ConcreteCommands.LightOnCommand;
+import Command.Receivers.Light;
+
 import java.util.Arrays;
 
 /**
@@ -15,10 +21,10 @@ public class CommandPattern {
         RemoteController remoteController = new RemoteController();
         remoteController.setCommand(0, lightOnCommand, lightOffCommand);
 
-        Arrays.asList(remoteController.getOnCommand())
-                .forEach(Command::execute);
-        Arrays.asList(remoteController.getOffCommand())
-                .forEach(Command::execute);
+        Arrays.asList(remoteController.getOnCommands())
+                .forEach(ExecuteCommand::execute);
+        Arrays.asList(remoteController.getOffCommands())
+                .forEach(ExecuteCommand::execute);
 
         System.out.println(remoteController);
     }
