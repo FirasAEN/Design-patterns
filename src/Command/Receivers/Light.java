@@ -1,4 +1,4 @@
-package Command;
+package Command.Receivers;
 
 /**
  * Created by Firas on 12/13/2017.
