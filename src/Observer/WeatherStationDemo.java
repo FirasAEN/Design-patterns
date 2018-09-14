@@ -1,16 +1,12 @@
-package Observer.Subjects;
+package Observer;
 
 import Observer.Observers.CurrentDisplay;
 import Observer.Observers.Monitor;
-import org.junit.Test;
+import Observer.Subjects.WeatherStation;
 
-/**
- * Created by FAB3659 on 5/4/2017.
- */
-public class WeatherStationTest {
+public class WeatherStationDemo {
 
-    @Test
-    public void testWeatherStation(){
+    public static void main(String[] args){
         Monitor currDisplay = new CurrentDisplay();
 
         WeatherStation station = new WeatherStation();
@@ -22,7 +18,5 @@ public class WeatherStationTest {
         station.printDisplays();
 
         station.removeObserver(currDisplay);
-
     }
-
 }
