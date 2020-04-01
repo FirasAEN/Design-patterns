@@ -1,12 +1,9 @@
 package Command;
 
-import Command.CommandInterfaces.Command;
 import Command.Invokers.RemoteController;
 import Command.Receivers.ConcreteCommands.LightOffCommand;
 import Command.Receivers.ConcreteCommands.LightOnCommand;
 import Command.Receivers.Light;
-
-import java.util.Arrays;
 
 /**
  * Created by Firas on 12/13/2017.
