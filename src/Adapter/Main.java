@@ -11,6 +11,9 @@ public class Main {
 
         Employee ldapEmployee = new EmployeeLdapAdapter(new EmployeeLdap("2", "Stephen Colbert"));
         employees.add(ldapEmployee);
+
+        Employee csvEmployee  = new EmployeeFromCSV(new EmployeeCSV("3, stephen-colbert, steph@email.com"));
+        employees.add(csvEmployee);
         employees.forEach(System.out::println);
     }
 }
